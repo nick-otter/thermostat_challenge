@@ -5,6 +5,8 @@
   </head>
   <body>
     <section>
+      <div align="center">
+         THERMOSTAT
       <h1 id="temperature"></h1>
       <p>
         <button id="temperature-up">+</button>
@@ -14,7 +16,22 @@
         <button id="powersaving-on">PSM on</button>
         <button id="powersaving-off">PSM off</button>
       </p>
+      </div>
     </section>
     <script src="src/thermostat.js"></script>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+
+    $(function() {
+
+      var thermostat = new Thermostat();
+
+      $('#temperature').text(thermostat.temperature);
+      $('#powersaving-on').css({fontWeight: 'bold'});
+
+    });
+
+    </script>
   </body>
 </html>
